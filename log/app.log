@@ -1,0 +1,4 @@
+[2022-04-02 23:00:17:723] [INFO ] [method:Test01.main(Test01.java:8)]Info
+[2022-04-02 23:00:17:727] [WARN ] [method:Test01.main(Test01.java:9)]Warn
+[2022-04-02 23:00:44:033] [INFO ] [method:Test01.main(Test01.java:8)] Info
+[2022-04-02 23:00:44:035] [WARN ] [method:Test01.main(Test01.java:9)] Warn
