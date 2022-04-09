@@ -23,11 +23,6 @@ public class CpeHttpServer {
     private static final Logger LOGGER = LoggerFactory.getLogger(CpeHttpServer.class);
 
     /**
-     * 设备的serverUrl到设备Id的映射表
-     */
-    private final Map<String, Integer> deviceMap = new HashMap<>();
-
-    /**
      * HttpServer
      */
     private final HttpServer server;
@@ -37,9 +32,9 @@ public class CpeHttpServer {
      */
     private final int serverPort;
 
-    public CpeHttpServer(int serverPort) throws IOException {
+    public CpeHttpServer(int serverPort) {
         this.serverPort = serverPort;
-        server = HttpServer.create(new InetSocketAddress(this.serverPort), 0);
+        server = createServer();
         init();
     }
 
@@ -47,16 +42,16 @@ public class CpeHttpServer {
         ThreadPoolExecutor executor = new ThreadPoolExecutor(10, 10, 6000,
                 TimeUnit.MICROSECONDS, new LinkedBlockingQueue<>(1000));
         server.setExecutor(executor);
-        server.createContext("/", new RequestHandler(deviceMap));
+        server.createContext("/", new RequestHandler());
     }
 
-    /**
-     * 添加启动的设备
-     *
-     * @param device 设备
-     */
-    public void addDevice(Device device) {
-        deviceMap.put(device.getServerUrl(), device.getDevId());
+    private HttpServer createServer() {
+        try {
+            return HttpServer.create(new InetSocketAddress(this.serverPort), 0);
+        } catch (IOException e) {
+            LOGGER.error("createServer: catch an exception.", e);
+        }
+        return null;
     }
 
     /**
@@ -64,6 +59,7 @@ public class CpeHttpServer {
      */
     public void start() {
         server.start();
+        LOGGER.info("Http Server is started at port {}", serverPort);
     }
 
     /**
@@ -71,5 +67,6 @@ public class CpeHttpServer {
      */
     public void close() {
         server.stop(100);
+        LOGGER.info("Http Server is stoped at port {}", serverPort);
     }
 }

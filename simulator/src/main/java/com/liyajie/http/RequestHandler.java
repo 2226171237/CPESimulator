@@ -1,5 +1,7 @@
 package com.liyajie.http;
 
+import com.liyajie.broker.EventBroker;
+import com.liyajie.service.CpeCenterService;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import org.apache.http.HttpStatus;
@@ -20,11 +22,6 @@ public class RequestHandler implements HttpHandler {
 
     private static final String GET_METHOD = "GET";
 
-    private final Map<String, Integer> deviceMap;
-
-    public RequestHandler(Map<String, Integer> deviceMap) {
-        this.deviceMap = deviceMap;
-    }
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
@@ -35,16 +32,18 @@ public class RequestHandler implements HttpHandler {
             return;
         }
         dispatchRequest(exchange);
-        exchange.sendResponseHeaders(HttpStatus.SC_OK, 0);
+        exchange.sendResponseHeaders(HttpStatus.SC_NO_CONTENT, 0);
     }
 
     private void dispatchRequest(HttpExchange exchange) {
         String path = exchange.getRequestURI().getPath();
-        if (!deviceMap.containsKey(path)) {
+        CpeCenterService cpeCenter = CpeCenterService.getInstance();
+        if (!cpeCenter.contains(path)) {
             LOGGER.warn("dispatchRequest: path {} is not exist.", path);
             return;
         }
-        int deviceId = deviceMap.get(path);
-        
+        int deviceId = cpeCenter.getDeviceIdByUrl(path);
+        EventBroker eventBroker = EventBroker.getInstance();
+        eventBroker.broker(deviceId, "");
     }
 }

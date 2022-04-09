@@ -1,5 +1,6 @@
 package com.liyajie.model;
 
+import com.liyajie.service.DeviceProcess;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,6 +21,7 @@ public class Device {
      */
     private String serverUrl;
     private String name;
+    private DeviceProcess deviceProcess;
     private Map<String, Parameter> parameterMap;
 
     /**

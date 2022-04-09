@@ -19,6 +19,7 @@ public abstract class AbstractMethod<T> implements IRpcHandler {
 
     @Override
     public void handler(Device device, SOAPMessage request, ICallback callback) {
+        LOGGER.info("{} Entering {} function handler.", device.getName(), methodType());
         Object response = deviceProcess(device, request);
         SOAPMessage soapMessage = null;
         try {
@@ -27,6 +28,7 @@ public abstract class AbstractMethod<T> implements IRpcHandler {
         } catch (Exception e) {
             LOGGER.error("handler: build soap message catch an exception: ", e);
         }
+        LOGGER.info("{} Ending function {} handler.", device.getName(), methodType());
     }
 
     /**

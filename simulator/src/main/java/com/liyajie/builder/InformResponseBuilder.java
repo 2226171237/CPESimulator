@@ -48,7 +48,8 @@ public class InformResponseBuilder extends ResponseBuilder {
         for (EventStruct eventStruct : eventStructList) {
             SOAPElement eventElem = event.addChildElement("EventStruct");
             eventElem.addChildElement("EventCode").addTextNode(eventStruct.getEventCode());
-            eventElem.addChildElement("CommandKey").addTextNode(eventStruct.getCommandKey());
+            String commandKey = eventStruct.getCommandKey() == null ? "" : eventStruct.getCommandKey();
+            eventElem.addChildElement("CommandKey").addTextNode(commandKey);
         }
     }
 

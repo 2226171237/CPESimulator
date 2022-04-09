@@ -1,0 +1,7 @@
+1. 启动mongodb
+# mongo
+2. 启动genieacs-cwmp服务E:\WebStudy\genieacs\genieacs
+# ./dist/bin/genieacs-cwmp
+3. 启动genieacs-ui服务
+# ./dist/bin/genieacs-ui --ui-jwt-secret secret
+4. 浏览器地址： localhost:3000

@@ -31,6 +31,20 @@ public final class CpeConfig {
      */
     private String acsPassword;
     /**
+     * ACS请求类型HTTP或HTTPS
+     */
+    private String acsHttpType;
+    /**
+     * ACS摘要认证的realm
+     */
+    private String acsRealm;
+
+    /**
+     * CPE设备OUI
+     */
+    private String oui;
+
+    /**
      * CPE设备序列号
      */
     private String serialNumber;
@@ -39,17 +53,21 @@ public final class CpeConfig {
      */
     private String connectionRequestUrl;
     /**
+     * CPE监听的端口
+     */
+    private int deviceListenPort;
+    /**
+     * 设备数量
+     */
+    private int deviceNum;
+    /**
+     * 设备名称
+     */
+    private String deviceName;
+    /**
      * CPE的认证方式
      */
     private String cpeAuthType;
-    /**
-     * 请求类型HTTP或HTTPS
-     */
-    private String httpType;
-    /**
-     * 摘要认证的realm
-     */
-    private String realm;
     /**
      * 上报心跳的周期,单位s
      */

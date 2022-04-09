@@ -30,8 +30,11 @@ public class CpeHttpClient {
 
     private final CpeConfig cpeConfig;
 
+    private final String postUrl;
+
     private CpeHttpClient() {
         cpeConfig = CpeConfig.getInstance();
+        postUrl = cpeConfig.getAcsHttpType() + "://" + cpeConfig.getAcsHost() + ":" + cpeConfig.getAcsPort() + cpeConfig.getAcsUrl();
         HttpClientBuilder builder = HttpClients.custom();
         httpClient = builder.build();
     }
@@ -41,7 +44,7 @@ public class CpeHttpClient {
     }
 
     public String sendRequest(String body) {
-        HttpPost httpPost = new HttpPost(cpeConfig.getAcsUrl());
+        HttpPost httpPost = new HttpPost(postUrl);
         try {
             httpPost.setEntity(new StringEntity(body));
             CloseableHttpResponse response = httpClient.execute(httpPost);
@@ -61,7 +64,7 @@ public class CpeHttpClient {
         }
         int status = response.getStatusLine().getStatusCode();
         try (response) {
-            if (status != HttpStatus.SC_OK) {
+            if (status < HttpStatus.SC_OK || status >= HttpStatus.SC_MULTIPLE_CHOICES) {
                 LOGGER.error("sendRequest: response status is {}.", status);
                 throw new IOException("response status is error, status is " + status);
             }
@@ -76,6 +79,7 @@ public class CpeHttpClient {
         }
         try {
             httpClient.close();
+            LOGGER.info("HttpClient is closed.");
         } catch (IOException e) {
             LOGGER.error("close httpClient catch an exception: ", e);
         }

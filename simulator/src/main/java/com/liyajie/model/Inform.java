@@ -1,18 +1,16 @@
 package com.liyajie.model;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
 /**
  * @author Liyajie
  */
-@NoArgsConstructor
-@Builder
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Inform {
     private DeviceStruct deviceStruct;
     private List<EventStruct> eventStructs;
