@@ -1,0 +1,85 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:cwmp="urn:dslforum-org:cwmp-1-2"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <SOAP-ENV:Header>
+        <cwmp:ID SOAP-ENV:mustUnderstand="1">18012e76ef20013</cwmp:ID>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <cwmp:GetParameterValuesResponse>
+            <ParameterList SOAP-ENC:arrayType="cwmp:ParameterValueStruct[18]">
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.HostName</Name>
+                    <Value xsi:type="xsd:string">android-d87bf88d22e66acf</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.IPAddress</Name>
+                    <Value xsi:type="xsd:string">192.168.1.2</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.MACAddress</Name>
+                    <Value xsi:type="xsd:string">40:B0:FA:9C:4A:50</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.HostName</Name>
+                    <Value xsi:type="xsd:string">android-d91540e8540e9c7a</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.IPAddress</Name>
+                    <Value xsi:type="xsd:string">192.168.1.4</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.MACAddress</Name>
+                    <Value xsi:type="xsd:string">10:68:3F:77:88:20</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.HostName</Name>
+                    <Value xsi:type="xsd:string">Lena-PC</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.IPAddress</Name>
+                    <Value xsi:type="xsd:string">192.168.1.5</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.MACAddress</Name>
+                    <Value xsi:type="xsd:string">C0:14:3D:C0:CF:93</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.HostName</Name>
+                    <Value xsi:type="xsd:string">localhost</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.IPAddress</Name>
+                    <Value xsi:type="xsd:string">192.168.1.6</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.MACAddress</Name>
+                    <Value xsi:type="xsd:string">1C:3E:84:AC:BB:76</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.HostName</Name>
+                    <Value xsi:type="xsd:string">Munas-iphone</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.IPAddress</Name>
+                    <Value xsi:type="xsd:string">192.168.1.7</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.MACAddress</Name>
+                    <Value xsi:type="xsd:string">C0:9F:42:56:33:DF</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.HostName</Name>
+                    <Value xsi:type="xsd:string"/>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.IPAddress</Name>
+                    <Value xsi:type="xsd:string">192.168.1.3</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.MACAddress</Name>
+                    <Value xsi:type="xsd:string">20:10:7a:08:4d:43</Value>
+                </ParameterValueStruct>
+            </ParameterList>
+        </cwmp:GetParameterValuesResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
