@@ -8,6 +8,7 @@ import javax.xml.soap.SOAPException;
 import javax.xml.soap.SOAPMessage;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 /**
  * @author Liyajie
@@ -28,11 +29,15 @@ public final class ResponseBuilderFactory {
     private ResponseBuilderFactory() {
     }
 
-    public static SOAPMessage buildSoapMessage(Object body, CpeMethod method) throws SOAPException {
+    public static SOAPMessage buildSoapMessage(Object body, String headId, CpeMethod method) throws SOAPException {
         if (!BUILDERS.containsKey(method)) {
             LOGGER.error("buildSoapMessage: Method ={} is not error.", method.getName());
             throw new SOAPException("method is not error");
         }
-        return BUILDERS.get(method).buildSoapMessage(body);
+        String requestId = headId;
+        if (headId == null || "".equals(headId)) {
+            requestId = String.valueOf(System.currentTimeMillis());
+        }
+        return BUILDERS.get(method).buildSoapMessage(body, requestId);
     }
 }

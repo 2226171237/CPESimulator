@@ -21,6 +21,8 @@ public enum EventCode {
      */
     BOOTSTRAP_1("1 BOOTSTRAP"),
 
+    // 2 PERIODIC
+
     /**
      * 4 VALUE CHANGE
      */

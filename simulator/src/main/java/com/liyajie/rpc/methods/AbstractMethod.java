@@ -6,10 +6,12 @@ import com.liyajie.model.Device;
 import com.liyajie.model.Inform;
 import com.liyajie.rpc.api.ICallback;
 import com.liyajie.rpc.api.IRpcHandler;
+import com.liyajie.utils.SoapUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.xml.soap.SOAPMessage;
+import javax.xml.soap.*;
+import java.util.Iterator;
 
 /**
  * @author Liyajie
@@ -23,12 +25,34 @@ public abstract class AbstractMethod<T> implements IRpcHandler {
         Object response = deviceProcess(device, request);
         SOAPMessage soapMessage = null;
         try {
-            soapMessage = ResponseBuilderFactory.buildSoapMessage(response, methodType());
+            String headId = getHeadId(request);
+            soapMessage = ResponseBuilderFactory.buildSoapMessage(response, headId, methodType());
             callback.run(soapMessage);
         } catch (Exception e) {
             LOGGER.error("handler: build soap message catch an exception: ", e);
         }
         LOGGER.info("{} Ending function {} handler.", device.getName(), methodType());
+    }
+
+    private String getHeadId(SOAPMessage request) throws SOAPException {
+        if (request == null) {
+            return "";
+        }
+        String headId = "";
+        SOAPHeader soapHeader = request.getSOAPHeader();
+        Iterator<Node> elements = soapHeader.getChildElements();
+        while (elements.hasNext()) {
+            Node next = elements.next();
+            if (!(next instanceof SOAPElement)) {
+                continue;
+            }
+            SOAPElement cur = (SOAPElement) next;
+            if (cur.getLocalName().equals("ID")) {
+                headId = cur.getValue();
+                break;
+            }
+        }
+        return headId;
     }
 
     /**

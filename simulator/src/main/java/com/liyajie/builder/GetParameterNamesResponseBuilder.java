@@ -35,11 +35,10 @@ public class GetParameterNamesResponseBuilder extends ResponseBuilder {
         SOAPElement parameterList = namesResponse.addChildElement("ParameterList");
         parameterList.addAttribute(new QName("", "arrayType", "SOAP-ENC"), "cwmp:ParameterInfoStruct["
                 + parameterInfoStructList.size() + "]");
-        QName typeName = new QName("", "type", "xsi");
         for (ParameterInfoStruct info : parameterInfoStructList) {
             SOAPElement param = parameterList.addChildElement("ParameterInfoStruct");
             param.addChildElement("Name").addTextNode(info.getName());
-            param.addChildElement("Writeable").addTextNode(String.valueOf(info.isWriteable()));
+            param.addChildElement("Writable").addTextNode(String.valueOf(info.isWriteable()));
         }
     }
 }

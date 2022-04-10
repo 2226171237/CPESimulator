@@ -63,7 +63,7 @@ public class DeviceProcess implements Runnable {
 
     public void addEvent(String eventCodes) {
         eventCodeQueue.offer(eventCodes);
-        LOGGER.info("{} addEvent {}", device.getName(), eventCodes);
+        LOGGER.info("{} addEvent \"{}\"", device.getName(), eventCodes);
         notifyNew();
     }
 
@@ -74,7 +74,7 @@ public class DeviceProcess implements Runnable {
 
     private void processOneSession() throws InterruptedException {
         String eventCodes = eventCodeQueue.take();
-        LOGGER.info("{} processOneSession: eventCode is {}", device.getName(), eventCodes);
+        LOGGER.info("{} processOneSession: eventCode is \"{}\"", device.getName(), eventCodes);
         InformMethod informMethod = new InformMethod();
         informMethod.setEvents(EventCode.splitEvents(eventCodes));
         informMethod.handler(device, null, (soapMessage) -> {
@@ -99,6 +99,7 @@ public class DeviceProcess implements Runnable {
 
     private String soapMessageToString(SOAPMessage soapMessage) throws Exception {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
+        out.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n".getBytes(StandardCharsets.UTF_8));
         soapMessage.writeTo(out);
         return out.toString(StandardCharsets.UTF_8);
     }

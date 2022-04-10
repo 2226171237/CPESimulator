@@ -16,6 +16,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.lang.reflect.InvocationTargetException;
+import java.net.InetAddress;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -74,8 +75,9 @@ public class ReaderUtil {
             List<CSVRecord> records = parse.getRecords();
             for (CSVRecord record : records) {
                 Parameter param = new Parameter();
-                param.setName(record.get(0));
                 param.setObject(Boolean.parseBoolean(record.get(1)));
+                String name = param.isObject() ? record.get(0) + "." : record.get(0);
+                param.setName(name);
                 param.setWriteable(Boolean.parseBoolean(record.get(2)));
                 param.setValue(record.get(3));
                 param.setValueType(record.get(4));
@@ -87,7 +89,7 @@ public class ReaderUtil {
         return parameterMap;
     }
 
-    public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
+    public static void main(String[] args) throws Exception {
         Map<String, Parameter> parameterMap = readDeviceParams();
         System.out.println(parameterMap.get("DeviceID.Manufacturer"));
         readConfig(CpeConfig.getInstance());
@@ -102,5 +104,7 @@ public class ReaderUtil {
         map1.get("DeviceID.Manufacturer").setValue("LYJ");
         System.out.println(map1.get("DeviceID.Manufacturer"));
         System.out.println(map2.get("DeviceID.Manufacturer"));
+
+        System.out.println(InetAddress.getLocalHost().getHostAddress());
     }
 }

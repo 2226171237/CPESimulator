@@ -67,6 +67,6 @@ public class CpeHttpServer {
      */
     public void close() {
         server.stop(100);
-        LOGGER.info("Http Server is stoped at port {}", serverPort);
+        LOGGER.info("Http Server is stopped at port {}", serverPort);
     }
 }

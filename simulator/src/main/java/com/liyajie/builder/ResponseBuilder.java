@@ -10,7 +10,7 @@ import javax.xml.soap.*;
  */
 public abstract class ResponseBuilder {
 
-    public SOAPMessage buildSoapMessage(Object body) throws SOAPException {
+    public SOAPMessage buildSoapMessage(Object body, String requestId) throws SOAPException {
         SOAPMessage message = MessageFactory.newInstance().createMessage();
         SOAPEnvelope envelope = message.getSOAPPart().getEnvelope();
         // namespace
@@ -22,7 +22,7 @@ public abstract class ResponseBuilder {
         QName idName = new QName("urn:dslforum-org:cwmp-1-2", "ID", "cwmp");
         SOAPHeaderElement headerElement = soapHeader.addHeaderElement(idName);
         headerElement.addAttribute(new QName("", "mustUnderstand", "SOAP-ENV"), "1");
-        headerElement.addTextNode("2044897763");
+        headerElement.addTextNode(requestId);
         buildBody(message, body);
         return message;
     }

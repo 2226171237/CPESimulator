@@ -10,6 +10,8 @@ import com.liyajie.utils.ReaderUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -71,6 +73,7 @@ public class CpeEngine {
             deviceNew.setServerUrl(device.getServerUrl() + "/" + i);
             // 设备名以设备号为标识
             deviceNew.setName(device.getName() + "-" + i);
+            replaceBaseInfo(deviceNew);
             DeviceProcess deviceProcess = new DeviceProcess(deviceNew);
             // 初始首次上电和启动事件
             String events = EventCode.combineEvents(EventCode.BOOT_0, EventCode.BOOTSTRAP_1);
@@ -107,5 +110,29 @@ public class CpeEngine {
         }
         deviceNew.setParameterMap(newParameterMap);
         return deviceNew;
+    }
+
+    private void replaceBaseInfo(Device device) {
+        if (device.containsParameter("DeviceID.OUI")) {
+            Parameter param = device.getParameter("DeviceID.OUI");
+            param.setValue(cpeConfig.getOui() + "-" + device.getName());
+        }
+        if (device.containsParameter("DeviceID.SerialNumber")) {
+            Parameter param = device.getParameter("DeviceID.SerialNumber");
+            param.setValue(cpeConfig.getSerialNumber() + "-" + device.getName());
+        }
+        if (device.containsParameter("Device.DeviceInfo.SerialNumber")) {
+            Parameter param = device.getParameter("Device.DeviceInfo.SerialNumber");
+            param.setValue(cpeConfig.getSerialNumber() + "-" + device.getName());
+        }
+        if (device.containsParameter("InternetGatewayDevice.DeviceInfo.SerialNumber")) {
+            Parameter param = device.getParameter("InternetGatewayDevice.DeviceInfo.SerialNumber");
+            param.setValue(cpeConfig.getSerialNumber() + "-" + device.getName());
+        }
+        if (device.containsParameter("InternetGatewayDevice.ManagementServer.ConnectionRequestURL")) {
+            Parameter param = device.getParameter("InternetGatewayDevice.ManagementServer.ConnectionRequestURL");
+            String url = "http://localhost:" + cpeConfig.getDeviceListenPort() + device.getServerUrl();
+            param.setValue(url);
+        }
     }
 }

@@ -1,68 +1,1964 @@
-<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
-                   xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:cwmp="urn:dslforum-org:cwmp-1-2"
-                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <SOAP-ENV:Header>
-        <cwmp:ID SOAP-ENV:mustUnderstand="1">2044897763</cwmp:ID>
-    </SOAP-ENV:Header>
-    <SOAP-ENV:Body>
+POST / HTTP/1.1
+        Content-Length: 2065
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+    <soap-env:Header>
+        <cwmp:ID soap-env:mustUnderstand="1">0tzbi4va</cwmp:ID>
+    </soap-env:Header>
+    <soap-env:Body>
         <cwmp:Inform>
             <DeviceId>
-                <Manufacturer>Bellmann</Manufacturer>
-                <OUI>001F8F</OUI>
-                <ProductClass>HA9330e</ProductClass>
-                <SerialNumber>0000FFFFFF</SerialNumber>
+                <Manufacturer>Huawei Technologies Co., Ltd.</Manufacturer>
+                <OUI>202BC1</OUI>
+                <ProductClass>BM632w</ProductClass>
+                <SerialNumber>000000</SerialNumber>
             </DeviceId>
-            <Event SOAP-ENC:arrayType="cwmp:EventStruct[1]">
+            <Event soap-enc:arrayType="cwmp:EventStruct[1]">
                 <EventStruct>
-                    <EventCode>0 BootStrap</EventCode>
+                    <EventCode>2 PERIODIC</EventCode>
                     <CommandKey/>
                 </EventStruct>
             </Event>
             <MaxEnvelopes>1</MaxEnvelopes>
-            <CurrentTime>Sun Apr 03 18:49:57 CST 2022</CurrentTime>
+            <CurrentTime>2022-04-10T09:11:35.448Z</CurrentTime>
             <RetryCount>0</RetryCount>
-            <ParameterList SOAP-ENC:arrayType="cwmp:ParameterValueStruct[10]">
+            <ParameterList soap-enc:arrayType="cwmp:ParameterValueStruct[16]">
                 <ParameterValueStruct>
-                    <Name>Device.DeviceInfo.SpecVersion</Name>
-                    <Value xsi:type="xsd:string">1.0</Value>
+                    <Name>InternetGatewayDevice.DeviceInfo.SpecVersion</Name>
+                    <Value xsi:type="xsd:string">1</Value>
                 </ParameterValueStruct>
                 <ParameterValueStruct>
-                    <Name>Device.DeviceInfo.ProvisioningCode</Name>
+                    <Name>InternetGatewayDevice.DeviceInfo.HardwareVersion</Name>
+                    <Value xsi:type="xsd:string">40501</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.DeviceInfo.SoftwareVersion</Name>
+                    <Value xsi:type="xsd:string">V100R001IRQC56B017</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.DeviceInfo.ProvisioningCode</Name>
                     <Value xsi:type="xsd:string"/>
                 </ParameterValueStruct>
                 <ParameterValueStruct>
-                    <Name>Device.DeviceInfo.Manufacturer</Name>
-                    <Value xsi:type="xsd:string">easycwmp</Value>
-                </ParameterValueStruct>
-                <ParameterValueStruct>
-                    <Name>Device.DeviceInfo.ManufacturerOUI</Name>
-                    <Value xsi:type="xsd:string">FFFFFF</Value>
-                </ParameterValueStruct>
-                <ParameterValueStruct>
-                    <Name>Device.DeviceInfo.ProductClass</Name>
-                    <Value xsi:type="xsd:string">easycwmp</Value>
-                </ParameterValueStruct>
-                <ParameterValueStruct>
-                    <Name>Device.DeviceInfo.SerialNumber</Name>
-                    <Value xsi:type="xsd:string">FFFFFF123456</Value>
-                </ParameterValueStruct>
-                <ParameterValueStruct>
-                    <Name>Device.DeviceInfo.HardwareVersion</Name>
-                    <Value xsi:type="xsd:string">example_hw_version</Value>
-                </ParameterValueStruct>
-                <ParameterValueStruct>
-                    <Name>Device.DeviceInfo.SoftwareVersion</Name>
-                    <Value xsi:type="xsd:string">example_sw_version</Value>
-                </ParameterValueStruct>
-                <ParameterValueStruct>
-                    <Name>Device.ManagementServer.ConnectionRequestURL</Name>
+                    <Name>InternetGatewayDevice.ManagementServer.ParameterKey</Name>
                     <Value xsi:type="xsd:string"/>
                 </ParameterValueStruct>
                 <ParameterValueStruct>
-                    <Name>Device.ManagementServer.ParameterKey</Name>
-                    <Value xsi:type="xsd:string">unsetCommandKey</Value>
+                    <Name>InternetGatewayDevice.ManagementServer.ConnectionRequestURL</Name>
+                    <Value xsi:type="xsd:string">http://127.0.0.1:5737/</Value>
+                </ParameterValueStruct>
+                <ParameterValueStruct>
+                    <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.ExternalIPAddress
+                    </Name>
+                    <Value xsi:type="xsd:string">172.3.89.139</Value>
                 </ParameterValueStruct>
             </ParameterList>
         </cwmp:Inform>
-    </SOAP-ENV:Body>
-</SOAP-ENV:Envelope>
+    </soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 528
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Set-Cookie: session=c0b7b8dbc2a129ca
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">0tzbi4va</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:InformResponse>
+        <MaxEnvelopes>1</MaxEnvelopes>
+    </cwmp:InformResponse>
+</soap-env:Body>
+</soap-env:Envelope>
+        POST / HTTP/1.1
+        Content-Length: 0
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        HTTP/1.1 200 OK
+        Content-Length: 588
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200000</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 2974
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200000</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[20]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.DeviceInfo.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.DeviceSummary</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.IDLE.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.IPPingDiagnostics.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDeviceNumberOfEntries</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.Layer2Bridging.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.Layer3Forwarding.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.Layer3QoS.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.ManagementServer.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.ManagementServerConfig.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.OperatorProfile.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.Services.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.Time.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.UserInterface.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDeviceNumberOfEntries</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WiMAX.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.X_HUAWEI_FireWall.</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.X_HUAWEI_SyslogConfig.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 598
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200001</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.WANDevice.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 723
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200001</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[1]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 620
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200002</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 744
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200002</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[1]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 638
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200003</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 762
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200003</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[1]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 640
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200004</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 5703
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200004</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[30]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.AddressingType</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.AutoDisconnectTime
+                </Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.ConnectionStatus</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.ConnectionTrigger</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.ConnectionType</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.DNSEnabled</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.DNSOverrideAllowed
+                </Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.DNSServers</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.DefaultGateway</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.Enable</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.ExternalIPAddress</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.LastConnectionError
+                </Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.MACAddress</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.MACAddressOverride
+                </Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.MaxMTUSize</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.NATEnabled</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.Name</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.PortMapping.</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>
+                    InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.PortMappingNumberOfEntries
+                </Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>
+                    InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.PossibleConnectionTypes
+                </Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.Reset</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.RouteProtocolRx</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.Stats.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.SubnetMask</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.Uptime</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.X_HUAWEI_DHCPRelay
+                </Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.X_HUAWEI_DMZ.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.X_HUAWEI_PortTrigger.
+                </Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>
+                    InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.X_HUAWEI_PortTriggerNumberOfEntries
+                </Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.X_HUAWEI_ServiceList
+                </Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 598
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200005</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.LANDevice.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 723
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200005</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[1]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 682
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200006</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterValues>
+        <ParameterNames soap-enc:arrayType="xsd:string[1]">
+            <string>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.MACAddress</string>
+        </ParameterNames>
+    </cwmp:GetParameterValues>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 806
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200006</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterValuesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterValueStruct[1]">
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1.MACAddress</Name>
+                <Value xsi:type="xsd:string">20:2B:C1:E0:06:65</Value>
+            </ParameterValueStruct>
+        </ParameterList>
+    </cwmp:GetParameterValuesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 600
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200007</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.LANDevice.1.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 1582
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200007</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[7]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.LANEthernetInterfaceConfig.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.LANEthernetInterfaceNumberOfEntries</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.LANHostConfigManagement.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.LANWLANConfigurationNumberOfEntries</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.X_HUAWEI_WLANEnable</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 618
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200008</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.LANDevice.1.WLANConfiguration.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 743
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200008</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[1]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 606
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200009</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.LANDevice.1.Hosts.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 1010
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200009</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[3]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.HostNumberOfEntries</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.X_HUAWEI_Host.</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 620
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f20000a</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 8169
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f20000a</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[49]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.AssociatedDevice.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.AutoChannelEnable</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.BSSID</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.BasicAuthenticationMode</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.BasicEncryptionModes</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.BeaconType</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.Channel</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.Enable</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.IEEE11iAuthenticationMode</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.IEEE11iEncryptionModes</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.MACAddressControlEnabled</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.MaxBitRate</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.PreSharedKey.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.RegulatoryDomain</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.SSID</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.SSIDAdvertisementEnabled</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.Standard</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.Status</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.TotalAssociations</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.TotalBytesReceived</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.TotalBytesSent</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.TotalPacketsReceived</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.TotalPacketsSent</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.WEPEncryptionLevel</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.WEPKey.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.WEPKeyIndex</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.WMMEnable</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.WPAAuthenticationMode</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.WPAEncryptionModes</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.WPS.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_AssociateDeviceNum</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_ChannelUsed</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_MixedAuthenticationMode</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_MixedEncryptionModes</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_PowerValue</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_TotalBytesReceivedError</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_TotalBytesSentError</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_TotalPacketsReceivedError</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_TotalPacketsSentError</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_WLANVersion</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_Wlan11NBWControl</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_Wlan11NGIControl</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_Wlan11NHtMcs</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_Wlan11NTxRxStream</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_WlanIsolateControl</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_WlanMacFilter.</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_WlanMacFilternum</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_WlanMacFilterpolicy</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_HUAWEI_WlanStaWakeEnable</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 611
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f20000b</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.LANDevice.1.Hosts.Host.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 1381
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f20000b</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[6]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 613
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f20000c</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 1737
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f20000c</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[8]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.Active</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.AddressSource</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.HostName</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.IPAddress</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.Layer2Interface</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.LeaseTimeRemaining</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.MACAddress</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.X_HUAWEI_DeviceType</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 613
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f20000d</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 1737
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f20000d</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[8]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.Active</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.AddressSource</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.HostName</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.IPAddress</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.Layer2Interface</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.LeaseTimeRemaining</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.MACAddress</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.X_HUAWEI_DeviceType</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 613
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f20000e</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 1737
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f20000e</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[8]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.Active</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.AddressSource</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.HostName</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.IPAddress</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.Layer2Interface</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.LeaseTimeRemaining</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.MACAddress</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.X_HUAWEI_DeviceType</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 613
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f20000f</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 1737
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f20000f</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[8]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.Active</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.AddressSource</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.HostName</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.IPAddress</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.Layer2Interface</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.LeaseTimeRemaining</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.MACAddress</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.X_HUAWEI_DeviceType</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 613
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200010</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 1737
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200010</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[8]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.Active</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.AddressSource</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.HostName</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.IPAddress</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.Layer2Interface</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.LeaseTimeRemaining</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.MACAddress</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.X_HUAWEI_DeviceType</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 613
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200011</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 1737
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200011</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[8]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.Active</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.AddressSource</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.HostName</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.IPAddress</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.Layer2Interface</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.LeaseTimeRemaining</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.MACAddress</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.X_HUAWEI_DeviceType</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 656
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200012</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterValues>
+        <ParameterNames soap-enc:arrayType="xsd:string[1]">
+            <string>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.SSID</string>
+        </ParameterNames>
+    </cwmp:GetParameterValues>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 782
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200012</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterValuesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterValueStruct[1]">
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.SSID</Name>
+                <Value xsi:type="xsd:string">404 WiMAX Not Found</Value>
+            </ParameterValueStruct>
+        </ParameterList>
+    </cwmp:GetParameterValuesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 1896
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200013</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterValues>
+        <ParameterNames soap-enc:arrayType="xsd:string[18]">
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.HostName</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.IPAddress</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.MACAddress</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.HostName</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.IPAddress</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.MACAddress</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.HostName</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.IPAddress</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.MACAddress</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.HostName</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.IPAddress</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.MACAddress</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.HostName</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.IPAddress</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.MACAddress</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.HostName</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.IPAddress</string>
+            <string>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.MACAddress</string>
+        </ParameterNames>
+    </cwmp:GetParameterValues>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 3566
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200013</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterValuesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterValueStruct[18]">
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.HostName</Name>
+                <Value xsi:type="xsd:string">android-d87bf88d22e66acf</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.IPAddress</Name>
+                <Value xsi:type="xsd:string">192.168.1.2</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.1.MACAddress</Name>
+                <Value xsi:type="xsd:string">40:B0:FA:9C:4A:50</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.HostName</Name>
+                <Value xsi:type="xsd:string">android-d91540e8540e9c7a</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.IPAddress</Name>
+                <Value xsi:type="xsd:string">192.168.1.4</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.2.MACAddress</Name>
+                <Value xsi:type="xsd:string">10:68:3F:77:88:20</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.HostName</Name>
+                <Value xsi:type="xsd:string">Lena-PC</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.IPAddress</Name>
+                <Value xsi:type="xsd:string">192.168.1.5</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.3.MACAddress</Name>
+                <Value xsi:type="xsd:string">C0:14:3D:C0:CF:93</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.HostName</Name>
+                <Value xsi:type="xsd:string">localhost</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.IPAddress</Name>
+                <Value xsi:type="xsd:string">192.168.1.6</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.4.MACAddress</Name>
+                <Value xsi:type="xsd:string">1C:3E:84:AC:BB:76</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.HostName</Name>
+                <Value xsi:type="xsd:string">Munas-iphone</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.IPAddress</Name>
+                <Value xsi:type="xsd:string">192.168.1.7</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.5.MACAddress</Name>
+                <Value xsi:type="xsd:string">C0:9F:42:56:33:DF</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.HostName</Name>
+                <Value xsi:type="xsd:string"/>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.IPAddress</Name>
+                <Value xsi:type="xsd:string">192.168.1.3</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.LANDevice.1.Hosts.Host.6.MACAddress</Name>
+                <Value xsi:type="xsd:string">20:10:7a:08:4d:43</Value>
+            </ParameterValueStruct>
+        </ParameterList>
+    </cwmp:GetParameterValuesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 566
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200014</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath></ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 711
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200014</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[1]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 605
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200015</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNames>
+        <ParameterPath>InternetGatewayDevice.ManagementServer.</ParameterPath>
+        <NextLevel>1</NextLevel>
+    </cwmp:GetParameterNames>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 1975
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200015</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterNamesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterInfoStruct[10]">
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.ManagementServer.ConnectionRequestPassword</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.ManagementServer.ConnectionRequestURL</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.ManagementServer.ConnectionRequestUsername</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.ManagementServer.ParameterKey</Name>
+                <Writable>false</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.ManagementServer.Password</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.ManagementServer.PeriodicInformEnable</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.ManagementServer.PeriodicInformInterval</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.ManagementServer.URL</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.ManagementServer.Username</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+            <ParameterInfoStruct>
+                <Name>InternetGatewayDevice.ManagementServer.X_HUAWEI_SSLCertEnable</Name>
+                <Writable>true</Writable>
+            </ParameterInfoStruct>
+        </ParameterList>
+    </cwmp:GetParameterNamesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 200 OK
+        Content-Length: 897
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Content-Type: text/xml; charset="utf-8"
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200016</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterValues>
+        <ParameterNames soap-enc:arrayType="xsd:string[4]">
+            <string>InternetGatewayDevice.ManagementServer.ConnectionRequestUsername</string>
+            <string>InternetGatewayDevice.ManagementServer.ConnectionRequestPassword</string>
+            <string>InternetGatewayDevice.ManagementServer.PeriodicInformEnable</string>
+            <string>InternetGatewayDevice.ManagementServer.PeriodicInformInterval</string>
+        </ParameterNames>
+    </cwmp:GetParameterValues>
+</soap-env:Body>
+</soap-env:Envelope>POST / HTTP/1.1
+        Content-Length: 1281
+        Content-Type: text/xml; charset="utf-8"
+        Authorization: Basic OEtBOFdBMTE1MTEwMDA0Mzo=
+        Cookie: session=c0b7b8dbc2a129ca
+        Host: 127.0.0.1:7547
+        Connection: keep-alive
+
+        <?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                   xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+<soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">18012be2f200016</cwmp:ID>
+</soap-env:Header>
+<soap-env:Body>
+    <cwmp:GetParameterValuesResponse>
+        <ParameterList soap-enc:arrayType="cwmp:ParameterValueStruct[4]">
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.ManagementServer.ConnectionRequestUsername</Name>
+                <Value xsi:type="xsd:string">202BC1-BM632w-000000</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.ManagementServer.ConnectionRequestPassword</Name>
+                <Value xsi:type="xsd:string">69t0mkjya1</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.ManagementServer.PeriodicInformEnable</Name>
+                <Value xsi:type="xsd:boolean">true</Value>
+            </ParameterValueStruct>
+            <ParameterValueStruct>
+                <Name>InternetGatewayDevice.ManagementServer.PeriodicInformInterval</Name>
+                <Value xsi:type="xsd:unsignedInt">300</Value>
+            </ParameterValueStruct>
+        </ParameterList>
+    </cwmp:GetParameterValuesResponse>
+</soap-env:Body>
+</soap-env:Envelope>HTTP/1.1 204 No Content
+        Content-Length: 0
+        Server: GenieACS/1.2.8+20220409135451
+        SOAPServer: GenieACS/1.2.8+20220409135451
+        Connection: close
+        Date: Sun, 10 Apr 2022 09:11:35 GMT
+

@@ -4,6 +4,7 @@ import com.liyajie.config.CpeConfig;
 import lombok.AllArgsConstructor;
 import org.apache.commons.codec.binary.StringUtils;
 import org.apache.http.HttpEntity;
+import org.apache.http.HttpHeaders;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -45,6 +46,7 @@ public class CpeHttpClient {
 
     public String sendRequest(String body) {
         HttpPost httpPost = new HttpPost(postUrl);
+        httpPost.setHeader(HttpHeaders.CONTENT_TYPE, "text/xml; charset=\"utf-8\"");
         try {
             httpPost.setEntity(new StringEntity(body));
             CloseableHttpResponse response = httpClient.execute(httpPost);
@@ -64,12 +66,13 @@ public class CpeHttpClient {
         }
         int status = response.getStatusLine().getStatusCode();
         try (response) {
+            HttpEntity entity = response.getEntity();
+            String body = entity == null ? "" : EntityUtils.toString(entity, StandardCharsets.UTF_8);
             if (status < HttpStatus.SC_OK || status >= HttpStatus.SC_MULTIPLE_CHOICES) {
-                LOGGER.error("sendRequest: response status is {}.", status);
+                LOGGER.error("sendRequest: response status is {}, reason is {}", status, body);
                 throw new IOException("response status is error, status is " + status);
             }
-            HttpEntity entity = response.getEntity();
-            return EntityUtils.toString(entity, StandardCharsets.UTF_8);
+            return body;
         }
     }
 
