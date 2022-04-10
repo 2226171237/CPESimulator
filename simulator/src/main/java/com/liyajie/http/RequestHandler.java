@@ -1,6 +1,7 @@
 package com.liyajie.http;
 
 import com.liyajie.broker.EventBroker;
+import com.liyajie.constants.EventCode;
 import com.liyajie.service.CpeCenterService;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -44,6 +45,6 @@ public class RequestHandler implements HttpHandler {
         }
         int deviceId = cpeCenter.getDeviceIdByUrl(path);
         EventBroker eventBroker = EventBroker.getInstance();
-        eventBroker.broker(deviceId, "");
+        eventBroker.broker(deviceId, EventCode.combineEvents(EventCode.CONNECTION_REQUEST_6));
     }
 }

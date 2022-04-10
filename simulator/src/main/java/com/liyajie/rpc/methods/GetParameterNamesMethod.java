@@ -59,7 +59,7 @@ public class GetParameterNamesMethod extends AbstractMethod<GetParameterNamesRes
                 }
                 SOAPElement currentElem = (SOAPElement) next;
                 if ("ParameterPath".equals(currentElem.getLocalName())) {
-                    parameterPath = currentElem.getValue();
+                    parameterPath = currentElem.getValue() == null ? "" : currentElem.getValue();
                 }
                 if ("NextLevel".equals(currentElem.getLocalName())) {
                     int value = Integer.parseInt(currentElem.getValue());
@@ -75,10 +75,6 @@ public class GetParameterNamesMethod extends AbstractMethod<GetParameterNamesRes
 
     private List<Parameter> getParametersByPath(Device device, String parameterPath, boolean nextLevel) {
         List<Parameter> params = new ArrayList<>();
-        if (parameterPath == null || "".equals(parameterPath)) {
-            LOGGER.warn("{} getParametersByPath: parameterPath is empty", device.getName());
-            return params;
-        }
         Map<String, Parameter> parameterMap = device.getParameterMap();
         if (nextLevel) {
             for (String p : parameterMap.keySet()) {

@@ -21,13 +21,35 @@ public enum EventCode {
      */
     BOOTSTRAP_1("1 BOOTSTRAP"),
 
-    // 2 PERIODIC
+    /**
+     * 2 PERIODIC
+     */
+    PERIODIC_2("2 PERIODIC"),
+
+    /**
+     * 3 SCHEDULED
+     */
+    SCHEDULED_3("3 SCHEDULED"),
 
     /**
      * 4 VALUE CHANGE
      */
-    VALUE_CHANGE_4("4 VALUE CHANGE");
-    
+    VALUE_CHANGE_4("4 VALUE CHANGE"),
+
+    /**
+     * 5 KICKED
+     */
+    KICKED("5 KICKED"),
+
+    /**
+     * 6 CONNECTION REQUEST
+     */
+    CONNECTION_REQUEST_6("6 CONNECTION REQUEST"),
+
+    /**
+     * 7 TRANSFER COMPLETE
+     */
+    TRANSFER_COMPLETE_7("7 TRANSFER COMPLETE");
 
     @Getter
     private final String name;
