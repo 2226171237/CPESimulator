@@ -1,3 +1,4 @@
 # Project exclude paths
 /learning/target/
 /simulator/target/
+/log/app.log
