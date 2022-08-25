@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope"
+                   xmlns:a="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+                   xmlns:d="http://schemas.xmlsoap.org/ws/2005/04/discovery"
+                   xmlns:dn="http://www.onvif.org/ver10/network/wsdl">
+    <SOAP-ENV:Header>
+        <a:MessageID>urn:uuid:91f52fc3-f56f-4e82-b3be-11a5907041dc</a:MessageID>
+        <a:RelatesTo>uuid:2a8898f5-d272-4764-963e-386b48c0e6b2</a:RelatesTo>
+        <a:ReplyTo>
+            <a:Address>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</a:Address>
+        </a:ReplyTo>
+        <a:To>http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous</a:To>
+        <a:Action>http://schemas.xmlsoap.org/ws/2005/04/discovery/ProbeMatches</a:Action>
+        <d:AppSequence InstanceId="0" MessageNumber="0"/>
+    </SOAP-ENV:Header>
+    <SOAP-ENV:Body>
+        <d:ProbeMatches>
+            <d:ProbeMatch>
+                <a:EndpointReference>
+                    <a:Address>urn:uuid:82446d2c-046f-4cb7-83db-be98a7fe61c3</a:Address>
+                </a:EndpointReference>
+                <d:Types>dn:NetworkVideoTransmitter</d:Types>
+                <d:Scopes>onvif://www.onvif.org/Profile/Streaming onvif://www.onvif.org/hardware/NetworkVideoTransmitter
+                    onvif://www.onvif.org/location/country/china onvif://www.onvif.org/location/city/shenzhen
+                    onvif://www.onvif.org/name/NVT
+                </d:Scopes>
+                <d:XAddrs>http://192.168.2.250:10086</d:XAddrs>
+                <d:MetadataVersion>1</d:MetadataVersion>
+            </d:ProbeMatch>
+        </d:ProbeMatches>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
